@@ -10,5 +10,10 @@ public class Movies {
 	private float boxoffice_collection;
 	private String name;
 	
+	public Movies() {
+		System.out.println("done");
+	}
+
+	
 
 }

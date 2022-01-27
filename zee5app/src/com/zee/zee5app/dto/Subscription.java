@@ -1,6 +1,6 @@
 package com.zee.zee5app.dto;
 
-import com.zee.zee5app.exception.InvalidAmountException;
+//import com.zee.zee5app.exception.InvalidAmountException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 
 import lombok.AccessLevel;
@@ -22,12 +22,12 @@ public class Subscription implements Comparable<Subscription>{
 	}
 
 	public Subscription(String type, String dateOfPurchase, String id, String paymentMode, int amount,
-			String status, String autoRenewal, String expiryDate) throws InvalidIdLengthException, InvalidAmountException {
+			String status, String autoRenewal, String expiryDate) throws InvalidIdLengthException {
 		super();
 		this.setId(id);
 		this.setDateOfPurchase(dateOfPurchase);
 		this.setExpiryDate(expiryDate);
-		this.setAmount(amount);
+		//this.setAmount(amount);
 		this.setPaymentMode(paymentMode);
 		this.setStatus(status);
 		this.setType(type);
@@ -61,11 +61,11 @@ public class Subscription implements Comparable<Subscription>{
 
 	}
 
-	public void setAmount(int amount) throws InvalidAmountException {
-		if(amount < 1000)
-			throw new InvalidAmountException("Amount cannot be less than 1000");
-		this.amount = amount;
-	}
+//	public void setAmount(int amount) throws InvalidAmountException {
+//		if(amount < 1000)
+//			throw new InvalidAmountException("Amount cannot be less than 1000");
+//		this.amount = amount;
+//	}
 
 	
 

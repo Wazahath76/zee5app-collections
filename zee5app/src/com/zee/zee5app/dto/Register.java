@@ -5,7 +5,7 @@ import java.util.Objects;
 import com.zee.zee5app.exception.InvalidEmailException;
 import com.zee.zee5app.exception.InvalidIdLengthException;
 import com.zee.zee5app.exception.InvalidNameException;
-import com.zee.zee5app.exception.InvalidPasswordException;
+//import com.zee.zee5app.exception.InvalidPasswordException;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -32,13 +32,13 @@ public class Register implements Comparable<Register>{
 //public class Register {
 	//add contact number field
 	public Register(String id, String firstName, String lastName, String email, String password) 
-			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException, InvalidPasswordException {
+			throws InvalidIdLengthException, InvalidNameException, InvalidEmailException {
 		super();
  		this.setId(id);
 		this.setFirstName(firstName);
 		this.setLastName(lastName);
 		this.setEmail(email);
-		this.setPassword(password);
+		//this.setPassword(password);
 	}
 
 	@Setter(value = AccessLevel.NONE)
@@ -103,11 +103,11 @@ public class Register implements Comparable<Register>{
 		this.email = email;
 	}
 
-	public void setPassword(String password) throws InvalidPasswordException {
-		if(password.matches("[A-Za-z0-9]+") == false || !(Character.isUpperCase(password.charAt(0))))
-			throw new InvalidPasswordException("password should only contain alphanumeric characters and first letter uppercase");
-		this.password = password;
-	}
+//	public void setPassword(String password) throws InvalidPasswordException {
+//		if(password.matches("[A-Za-z0-9]+") == false || !(Character.isUpperCase(password.charAt(0))))
+//			throw new InvalidPasswordException("password should only contain alphanumeric characters and first letter uppercase");
+//		this.password = password;
+//	}
 
 	@Override
 	public int compareTo(Register o) {

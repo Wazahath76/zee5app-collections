@@ -6,6 +6,7 @@ import com.zee.zee5app.repository.UserRepository;
 // can we do this using 1 object?
 // to fix they provided a solution called singleton Design Pattern.
 // one  =  to get only one object for the specific type
+import com.zee.zee5app.repository.UserRepository2;
 
 public class UserService2 {
 	
